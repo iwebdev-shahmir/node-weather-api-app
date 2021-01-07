@@ -30,9 +30,9 @@ https.get(url, function(response) {
 
     const imgUrl = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
 
-    res.write("<p>the Temperature is "+ temp + "</p>");
-    res.write("<p>the weather is " + weatherDec+ "</p>");
-    res.write("<img src="+ imgUrl +">");
+    res.write("<div style='text-align: center; margin-top:100px'> <p>the Temperature in "+ city + " is "+ temp + "</p>");
+    res.write("<p>the weather of "+ city + "is " + weatherDec+ "</p>");
+    res.write("<img src="+ imgUrl +"> </div>");
     res.send();
 
   });
